@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform with translate</title>
+    <style type="text/css">
+        .container{
+            width: 1000px;
+            background-color: grey;
+        }
+
+        .container .square{
+            width: 150px;
+            height: 60px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            padding: 10px 0;
+            margin: 20px 0;
+
+            text-align: center;
+            line-height: 60px;
+        }
+
+        #translate:hover{
+            /* translate(xy) */
+            /* transform: translate(300px); */
+            /* transform: translate(-100px); */
+
+            transform: translate(100%);
+        }
+
+        #translateX:hover{
+            /* transform: translateX(x); */
+
+            /* transform: translateX(100px); */
+            transform: translateX(-100px);
+        }
+
+        #translateY:hover{
+            /* transform: translateY(y); */
+
+            transform: translateY(10px);
+            /* transform: translateY(200px); */
+        }
+
+        #translatexy:hover{
+            /* transform: translate(x,y); */
+
+            /* transform: translate(100px,0); */
+            /* transform: translate(0,100px); */
+            /* transform: translate(0,-100px); */
+
+            /* transform: translate(100%,0); */
+            /* transform: translate(100px,100px); */
+            /* transform: translate(-100px,-100px); */
+            transform: translate(100px,10px);
+
+        }
+
+        img{
+            width: 300px;
+            display: block;
+            margin: auto;
+
+            transition: transform 1s;
+        }
+
+        img:hover{
+            /* transform: translate(300px); */
+            /* transform: translate(-500px); */
+            /* transform: translate(100%); */
+            
+            /* transform: translateX(-100%); */
+            /* transform: translateY(50%); */
+            /* transform: translateY(-100%); */
+
+            /* transform: translate(-100%,-50%); */
+            /* transform: translate(-100%,100%); */
+
+            transform: translateX(-100%) translateY(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="translate" class="square">Translate Me</div>
+    </div>
+
+    <div class="container">
+        <div id="translateX" class="square">Translate X</div>
+    </div>
+
+    <div class="container">
+        <div id="translateY" class="square">Translate Y</div>
+    </div>
+
+    <div class="container">
+        <div id="translatexy" class="square">Translate XY</div>
+    </div>
+
+    <hr/>
+    <img src="./img/dog.jpg" alt="dog">
+</body>
+</html>
