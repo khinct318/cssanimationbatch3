@@ -3,10 +3,69 @@
 <head>
     <title>Perspective</title>
     <style type="text/css">
-        
+        *{
+            perspective: 500px;
+        }
+
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 500px;
+            background-color: grey;
+
+        }
+
+        .div1{
+            width: 250px;
+            height: 100px;
+            background-color: lightgray;
+            box-shadow:  -5px 0 10px rgba(0,0,0,0.7);
+            /* perspective: 600px; */
+            padding: 10px;
+            position: relative;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .div2{
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+
+            transform: rotateX(45deg);
+            padding: 50px;
+            position: absolute;
+            left: -6%;
+            top: -100%;
+            border: 1px solid black;
+
+            z-index: 1;
+        }
+
+        .div3{
+            width: 50px;
+            height: 100px;
+            background: conic-gradient(pink 50%,lightyellow 0%);
+
+            position: absolute;
+            left: 58%;
+            top: 17%;
+            border: 1px dotted black;
+        }
     </style>
 </head>
 <body>
-
+    <div class="container">
+        <div class="div1"> DIV 1
+            <div class="div2">DIV 2</div>
+            <div class="div3">DIV 3</div>
+        </div>
+    </div>
 </body>
 </html>
